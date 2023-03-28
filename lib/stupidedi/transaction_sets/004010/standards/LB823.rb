@@ -11,7 +11,7 @@ module Stupidedi
           d::TableDef.header("1 - Header",
             s::ST.use(10, r::Mandatory, d::RepeatCount.bounded(1)),
             s::N1.use(20, r::Mandatory, d::RepeatCount.bounded(1)),
-            s::N1.use(30, r::Mandatory, d::RepeatCount.bounded(1)),
+            s::N2.use(30, r::Optional, d::RepeatCount.bounded(1)),
             s::DEP.use(40, r::Mandatory, d::RepeatCount.bounded(1)), # To indicate the lockbox ID, date, time, deposit number and bank account information
             s::AMT.use(50, r::Mandatory, d::RepeatCount.bounded(1)), # Total Amount
             s::QTY.use(60, r::Mandatory, d::RepeatCount.bounded(2))), # Number of Batches AND Number of Checks/Trans

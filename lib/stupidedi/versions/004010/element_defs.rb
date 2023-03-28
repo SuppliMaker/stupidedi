@@ -342,7 +342,9 @@ module Stupidedi
             "PW" => "Pick Up Address",
             "AB" => "Additional Pick Up Address",
             "DA" => "Delivery Address",
-            "AE" => "Addtional Delivery Address"))
+            "AE" => "Addtional Delivery Address",
+            "AO" => "Account of",
+            "BK" => "Bank"))
         E100  = t::ID.new(:E100 , "Currency Code"                        , 3, 3,
           s::CodeList.external("5"))
         E102  = t::ID.new(:E102 , "Ownership Code"                       , 1, 1,
