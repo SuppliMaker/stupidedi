@@ -52,7 +52,7 @@ module Stupidedi
                 b::Element(e::Required,    "Account Number")),
               b::Segment(40, s::REF ,"Check Number", r::Required, d::RepeatCount.bounded(2),
                 b::Element(e::Required,    "Reference Qualifier", b::Values("CK", "ZZ")),
-              b::Element(e::Situational,   "Reference Number")),
+                b::Element(e::Required, "Reference Number")),
               b::Segment(60, s::DTM, "Date the remittance was created", r::Required, d::RepeatCount.bounded(1),
                 b::Element(e::Required,    "Date/Time Qualifier", b::Values("107", "108", "109", "020")),
                 b::Element(e::Required,    "Date")),
