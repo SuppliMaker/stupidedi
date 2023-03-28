@@ -22,8 +22,7 @@ module Stupidedi
 
             d::LoopDef.build("BPR", d::RepeatCount.bounded(100),
               s::BPR.use( 30, r::Mandatory, d::RepeatCount.bounded(1)), # Beginning segment for Payment Order/Remittance Advice
-              s::REF.use( 40, r::Mandatory, d::RepeatCount.bounded(1)),
-              s::REF.use( 50, r::Mandatory, d::RepeatCount.bounded(1)), # Required by DMSi just eol
+              s::REF.use( 40, r::Mandatory, d::RepeatCount.bounded(2)),
               s::DTM.use( 60, r::Mandatory, d::RepeatCount.bounded(1)), # Date the Remittance was created
               s::N1.use( 70, r::Mandatory, d::RepeatCount.bounded(1))), # Customer Name
 
