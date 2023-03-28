@@ -5161,7 +5161,7 @@ module Stupidedi
             "U" => "Update"))
         E522  = t::ID.new(:E522 , "Amount Qualifier Code"                , 1, 3,
           s::CodeList.build(
-            "2"   => "Batch Total"
+            "2"   => "Batch Total",
             "3"   => "Deposit Total",
             "A8"  => "Noncovered Charges - Actual",
             "AU"  => "Coverage Amount",
