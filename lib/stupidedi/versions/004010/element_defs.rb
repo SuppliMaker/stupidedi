@@ -344,7 +344,9 @@ module Stupidedi
             "DA" => "Delivery Address",
             "AE" => "Addtional Delivery Address",
             "AO" => "Account of",
-            "BK" => "Bank"))
+            "BK" => "Bank",
+            "BV" => "DMSi code #1",
+            "BE" => "DMSi code #2"))
         E100  = t::ID.new(:E100 , "Currency Code"                        , 3, 3,
           s::CodeList.external("5"))
         E102  = t::ID.new(:E102 , "Ownership Code"                       , 1, 1,
