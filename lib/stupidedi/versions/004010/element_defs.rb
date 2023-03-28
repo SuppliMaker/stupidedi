@@ -329,6 +329,7 @@ module Stupidedi
             "PR" => "Payer",
             "QC" => "Patient",
             "RC" => "Receiving Location",
+            "RM" => "Remitting Party",
             "SH" => "Shipper",
             "SI" => "Shipping Schedule Issuer",
             "SF" => "Ship From",
