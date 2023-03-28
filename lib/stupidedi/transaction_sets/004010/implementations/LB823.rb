@@ -32,7 +32,7 @@ module Stupidedi
               b::Element(e::Required,    "Monetary Amount")),
             b::Segment(60, s::QTY, "To specify quantity information", r::Required, d::RepeatCount.bounded(2),
               b::Element(e::Required,    "Quantity Qualifier", b::Values("41", "42")),
-              b::Element(e::Required,    "Quantity")),
+              b::Element(e::Required,    "Quantity"))),
 
           d::TableDef.header("Detail",
             d::LoopDef.build("BAT", d::RepeatCount.bounded(100),
@@ -41,7 +41,7 @@ module Stupidedi
                 b::Element(e::Required,    "Reference Identification")),
               b::Segment(20, s::AMT, "Monetary Amount Information", r::Required, d::RepeatCount.bounded(1),
                 b::Element(e::Required,    "Amount Qualifier Code", b::Values("2")),
-                b::Element(e::Required, "Monetary Amount	")),
+                b::Element(e::Required, "Monetary Amount	"))),
 
             d::LoopDef.build("BPR", d::RepeatCount.bounded(100),
               b::Segment(30, s::BPR, "Beginning segment for Payment Order/Remittance Advice", r::Required, d::RepeatCount.bounded(1),
@@ -64,7 +64,7 @@ module Stupidedi
                 b::Element(e::Required,    "Date")),
               b::Segment(70, s::N1, "Party Identifier", r::Required, d::RepeatCount.bounded(1),
                 b::Element(e::Required,    "Entity Identifier Code", b::Values("RM")),
-                b::Element(e::Required,    "Name")),
+                b::Element(e::Required,    "Name"))),
 
             d::LoopDef.build("RMR", d::RepeatCount.bounded(100),
               b::Segment(80, s::RMR, "Remittance Advice Account Receivable Open Item Reference", r::Required, d::RepeatCount.bounded(1),
