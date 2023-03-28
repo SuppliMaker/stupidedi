@@ -37,6 +37,7 @@ module Stupidedi
         autoload :CTP, "stupidedi/versions/004010/segment_defs/CTP"
         autoload :CTT, "stupidedi/versions/004010/segment_defs/CTT"
         autoload :CUR, "stupidedi/versions/004010/segment_defs/CUR"
+        autoload :DEP, "stupidedi/versions/004010/segment_defs/DEP"
         autoload :DTM, "stupidedi/versions/004010/segment_defs/DTM"
         autoload :FST, "stupidedi/versions/004010/segment_defs/FST"
         autoload :G61, "stupidedi/versions/004010/segment_defs/G61"
