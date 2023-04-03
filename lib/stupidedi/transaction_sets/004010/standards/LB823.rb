@@ -24,11 +24,11 @@ module Stupidedi
               s::BPR.use( 30, r::Mandatory, d::RepeatCount.bounded(1)), # Beginning segment for Payment Order/Remittance Advice
               s::REF.use( 40, r::Mandatory, d::RepeatCount.bounded(2)),
               s::DTM.use( 60, r::Mandatory, d::RepeatCount.bounded(1)), # Date the Remittance was created
-              s::N1.use( 70, r::Mandatory, d::RepeatCount.bounded(1))), # Customer Name
+              s::N1.use( 70, r::Mandatory, d::RepeatCount.bounded(1)), # Customer Name
 
-            d::LoopDef.build("RMR", d::RepeatCount.bounded(100),
-              s::RMR.use( 80, r::Mandatory, d::RepeatCount.bounded(1)), # Accounts receivable item(s)
-              s::REF.use( 90, r::Mandatory, d::RepeatCount.bounded(1)))), # eol
+              d::LoopDef.build("RMR", d::RepeatCount.bounded(100),
+                s::RMR.use( 80, r::Mandatory, d::RepeatCount.bounded(1)), # Accounts receivable item(s)
+                s::REF.use( 90, r::Mandatory, d::RepeatCount.bounded(1))))), # eol
 
           d::TableDef.summary("3 - Summary",
             s:: SE.use( 10, r::Mandatory, d::RepeatCount.bounded(1))))
