@@ -26,7 +26,7 @@ module Stupidedi
           e::E507 .simple_use(r::Relational, s::RepeatCount.bounded(1)),
           e::E569 .simple_use(r::Optional,   s::RepeatCount.bounded(1)),
           e::E508 .simple_use(r::Relational, s::RepeatCount.bounded(1)),
-          e::E373 .simple_use(r::Mandatory,  s::RepeatCount.bounded(1)),
+          e::E373 .simple_use(r::Optional,  s::RepeatCount.bounded(1)),
           e::E1048.simple_use(r::Optional,   s::RepeatCount.bounded(1)),
           e::E506 .simple_use(r::Relational, s::RepeatCount.bounded(1)),
           e::E507 .simple_use(r::Relational, s::RepeatCount.bounded(1)),

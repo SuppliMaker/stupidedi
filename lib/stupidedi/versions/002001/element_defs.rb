@@ -5934,6 +5934,9 @@ module Stupidedi
         E480  = t::AN.new(:E480 , "Version / Release / Identifier Code"  , 1, 12,
           s::CodeList.external("881"))
         E501  = t::ID.new(:E501 , "Customes Document Handling Code"      , 2, 2)
+        E506  = t::ID.new(:E506 , "(DFI) ID Number Qualifier"             , 2, 2)
+        E507  = t::AN.new(:E507 , "(DFI) Identification"                 , 3, 12)
+        E508  = t::AN.new(:E508 , "Account Number"                       , 1, 35)
         E514  = t::ID.new(:E514 , "Reporting Code"                       , 1, 1,
           s::CodeList.build(
             "F" => "Full Detail",
@@ -6122,6 +6125,7 @@ module Stupidedi
             "W0010" => "Warranties",
             "X0010" => "Combine All Same Day Shipment"))
         E567  = t::Nn.new(:E567 , "Equipment Length"                     , 4, 5, 0)
+        E569  = t::ID.new(:E569 , "Account Number Qualifier"             , 1, 3)
         E571  = t::ID.new(:E571 , "Tare Qualifier Code"                  , 1, 1,
           s::CodeList.build(
             "A" => "Actual",

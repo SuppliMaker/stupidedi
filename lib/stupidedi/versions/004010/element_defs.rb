@@ -329,6 +329,7 @@ module Stupidedi
             "PR" => "Payer",
             "QC" => "Patient",
             "RC" => "Receiving Location",
+            "RM" => "Remitting Party",
             "SH" => "Shipper",
             "SI" => "Shipping Schedule Issuer",
             "SF" => "Ship From",
@@ -342,7 +343,11 @@ module Stupidedi
             "PW" => "Pick Up Address",
             "AB" => "Additional Pick Up Address",
             "DA" => "Delivery Address",
-            "AE" => "Addtional Delivery Address"))
+            "AE" => "Addtional Delivery Address",
+            "AO" => "Account of",
+            "BK" => "Bank",
+            "BV" => "DMSi code #1",
+            "BE" => "DMSi code #2"))
         E100  = t::ID.new(:E100 , "Currency Code"                        , 3, 3,
           s::CodeList.external("5"))
         E102  = t::ID.new(:E102 , "Ownership Code"                       , 1, 1,
@@ -4753,11 +4758,15 @@ module Stupidedi
             "010" => "Requested ship",
             "011" => "Shipped",
             "017" => "Estimated Delivery",
+            "020" => "Check date",
             "036" => "Expiration",
             "037" => "Ship not before",
             "038" => "Ship no later",
             "050" => "Received",
             "097" => "Transaction Creation",
+            "107" => "Deposit Date",
+            "108" => "Postmarked",
+            "109" => "Receipt at lockbox",
             "140" => "Actual",
             "150" => "Service Period Start",
             "151" => "Service Period End",
@@ -5139,6 +5148,7 @@ module Stupidedi
           s::CodeList.build(
             "1" => "Current Transaction Trace Numbers",
             "2" => "Referenced Transaction Trace Numbers"))
+        E482  = t::ID.new(:E482 , "Payment Action Code"                  , 2, 2)
         E499  = t::AN.new(:E499 , "Condition Value"                      , 1, 10)
         E501  = t::ID.new(:E501 , "Customes Document Handling Code"      , 2, 2)
         E506  = t::ID.new(:E506 , "DFI Identification Number Qualifier"  , 2, 2,
@@ -5156,6 +5166,8 @@ module Stupidedi
             "U" => "Update"))
         E522  = t::ID.new(:E522 , "Amount Qualifier Code"                , 1, 3,
           s::CodeList.build(
+            "2"   => "Batch Total",
+            "3"   => "Deposit Total",
             "A8"  => "Noncovered Charges - Actual",
             "AU"  => "Coverage Amount",
             "B6"  => "Allowed -Actual",
@@ -5988,6 +6000,8 @@ module Stupidedi
           s::CodeList.build(
             "01" => "Discrete Quantity",
             "02" => "Cumulative Quantity",
+            "41" => "Number of Batches",
+            "42" => "Number of Checks/Trans",
             "90" => "Acknowledged Quantity",
             "AA" => "Unacknowledged Quantity",
             "CA" => "Covered - Actual",
